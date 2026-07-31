@@ -1,0 +1,1693 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "equivalentProperty": "cr:equivalentProperty",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "TabLit-D3",
+  "description": "D3 cohort of TabLit (Indian River district operational records): Grade 1-2 panel (2,088 students) and Grade 3 ELA cohort (1,137 students), with student-level demographics (gender, ethnicity, ELL/LEP, ESE, Section 504, gifted, lunch status, homelessness, home language). RESTRICTED DISTRIBUTION: D3 consists of anonymized student-level operational records from a Florida school district, provided under a district-level data sharing agreement that does not permit public redistribution. Files are disclosed to the NeurIPS review committee for verification. SHA-256 checksums below commit publicly to the exact bytes the committee receives.",
+  "url": "https://github.com/anonymous-submission-n26/tablit",
+  "license": "Restricted district data sharing agreement; no public redistribution.",
+  "creator": [
+    {
+      "@type": "sc:Person",
+      "name": "Anonymous Author"
+    }
+  ],
+  "datePublished": "2026-07-24",
+  "version": "1.0.0",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "Anonymous Author. TabLit: A Demographic-Aware Benchmark for Modeling Early Literacy Outcomes.",
+  "rai:personalSensitiveInformation": "De-identified student-level records; coded student and school identifiers only; no names, dates of birth, or direct identifiers. Literal school names are withheld from these files.",
+  "rai:hasSyntheticData": "false",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "D3_G12.csv",
+      "name": "D3_G12-csv",
+      "description": "RESTRICTED DISTRIBUTION: D3 consists of anonymized student-level operational records from a Florida school district, provided under a district-level data sharing agreement that does not permit public redistribution. Files are disclosed to the NeurIPS review committee for verification. SHA-256 checksums below commit publicly to the exact bytes the committee receives.",
+      "contentUrl": "D3-Restricted/D3_G12.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "b5a921e53aa6ab6909a3cdb9a6eceea4d917951879dfae404f594d653a6b59f4"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "D3_G12_raw.csv",
+      "name": "D3_G12_raw-csv",
+      "description": "RESTRICTED DISTRIBUTION: D3 consists of anonymized student-level operational records from a Florida school district, provided under a district-level data sharing agreement that does not permit public redistribution. Files are disclosed to the NeurIPS review committee for verification. SHA-256 checksums below commit publicly to the exact bytes the committee receives.",
+      "contentUrl": "D3-Restricted/D3_G12_raw.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "c02964d8293f40de762cb80ad180c785bfb0a98781251af0f05e3d986474f297"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "D3_G3.csv",
+      "name": "D3_G3-csv",
+      "description": "RESTRICTED DISTRIBUTION: D3 consists of anonymized student-level operational records from a Florida school district, provided under a district-level data sharing agreement that does not permit public redistribution. Files are disclosed to the NeurIPS review committee for verification. SHA-256 checksums below commit publicly to the exact bytes the committee receives.",
+      "contentUrl": "D3-Restricted/D3_G3.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "563f854f75d15ed29339f701264c838a8446cbe54311e609059bf122b496c8b9"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "D3_G3_raw.csv",
+      "name": "D3_G3_raw-csv",
+      "description": "RESTRICTED DISTRIBUTION: D3 consists of anonymized student-level operational records from a Florida school district, provided under a district-level data sharing agreement that does not permit public redistribution. Files are disclosed to the NeurIPS review committee for verification. SHA-256 checksums below commit publicly to the exact bytes the committee receives.",
+      "contentUrl": "D3-Restricted/D3_G3_raw.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "f535b923e2bd1e81c421894059bcc2913732b08ee473d2081b2eae24e44fad71"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "D3_G12",
+      "name": "D3_G12",
+      "description": "Schema of D3_G12.csv (restricted distribution).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/CODED_ID",
+          "name": "CODED_ID",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "CODED_ID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/SCHOOL_ID",
+          "name": "SCHOOL_ID",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "SCHOOL_ID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/GRADE",
+          "name": "GRADE",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "GRADE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/GENDER",
+          "name": "GENDER",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "GENDER"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/FNR_STATUS_CODE",
+          "name": "FNR_STATUS_CODE",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "FNR_STATUS_CODE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/FNR_STATUS_DESCRIPTION",
+          "name": "FNR_STATUS_DESCRIPTION",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "FNR_STATUS_DESCRIPTION"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/SINGLE_ETHNICITY",
+          "name": "SINGLE_ETHNICITY",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "SINGLE_ETHNICITY"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/LEP_CODE",
+          "name": "LEP_CODE",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "LEP_CODE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/LEP_DESCRIPTION",
+          "name": "LEP_DESCRIPTION",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "LEP_DESCRIPTION"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/PRIM_EX_CODE",
+          "name": "PRIM_EX_CODE",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "PRIM_EX_CODE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/PRIM_EX",
+          "name": "PRIM_EX",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "PRIM_EX"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/OTHER_EX_CODES",
+          "name": "OTHER_EX_CODES",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "OTHER_EX_CODES"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/OTHER_EX",
+          "name": "OTHER_EX",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "OTHER_EX"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/GIFTED",
+          "name": "GIFTED",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "GIFTED"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/ESE",
+          "name": "ESE",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "ESE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/HOMELESS_CODE",
+          "name": "HOMELESS_CODE",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "HOMELESS_CODE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/HOMELESS_CAUSE",
+          "name": "HOMELESS_CAUSE",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "HOMELESS_CAUSE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/HOMELESS_UNAC_YTH",
+          "name": "HOMELESS_UNAC_YTH",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "HOMELESS_UNAC_YTH"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/GIFTED_ELIG",
+          "name": "GIFTED_ELIG",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "GIFTED_ELIG"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/S504",
+          "name": "S504",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "S504"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/PRIM_HOME_LANG",
+          "name": "PRIM_HOME_LANG",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "PRIM_HOME_LANG"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/LNF",
+          "name": "LNF",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "LNF"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/PSF",
+          "name": "PSF",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "PSF"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/NWF_Letter",
+          "name": "NWF_Letter",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "NWF_Letter"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/NWF_Word",
+          "name": "NWF_Word",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "NWF_Word"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/ORF_WC",
+          "name": "ORF_WC",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "ORF_WC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/UnifiedScore",
+          "name": "UnifiedScore",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "UnifiedScore"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/FAST_Equivalent_Score",
+          "name": "FAST_Equivalent_Score",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "FAST_Equivalent_Score"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/PR",
+          "name": "PR",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "PR"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/NCE",
+          "name": "NCE",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "NCE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/Overall_Scale_Score",
+          "name": "Overall_Scale_Score",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "Overall_Scale_Score"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/Phonological_Awareness_Scale_Score",
+          "name": "Phonological_Awareness_Scale_Score",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "Phonological_Awareness_Scale_Score"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/Phonics_Scale_Score",
+          "name": "Phonics_Scale_Score",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "Phonics_Scale_Score"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/Vocabulary_Scale_Score",
+          "name": "Vocabulary_Scale_Score",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "Vocabulary_Scale_Score"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/FAST_PM3_AchievementLevel",
+          "name": "FAST_PM3_AchievementLevel",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "FAST_PM3_AchievementLevel"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/iReady_Spring_Placement",
+          "name": "iReady_Spring_Placement",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "iReady_Spring_Placement"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/ELL",
+          "name": "ELL",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "ELL"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/below_level_3_fast",
+          "name": "below_level_3_fast",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "below_level_3_fast"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12.csv/below_grade_iready",
+          "name": "below_grade_iready",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12.csv"
+            },
+            "extract": {
+              "column": "below_grade_iready"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "D3_G12_raw",
+      "name": "D3_G12_raw",
+      "description": "Schema of D3_G12_raw.csv (restricted distribution).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/CODED_ID",
+          "name": "CODED_ID",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "CODED_ID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/SCHOOL_ID",
+          "name": "SCHOOL_ID",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "SCHOOL_ID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/GRADE",
+          "name": "GRADE",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "GRADE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/GENDER",
+          "name": "GENDER",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "GENDER"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/FNR_STATUS_CODE",
+          "name": "FNR_STATUS_CODE",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "FNR_STATUS_CODE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/FNR_STATUS_DESCRIPTION",
+          "name": "FNR_STATUS_DESCRIPTION",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "FNR_STATUS_DESCRIPTION"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/SINGLE_ETHNICITY",
+          "name": "SINGLE_ETHNICITY",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "SINGLE_ETHNICITY"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/LEP_CODE",
+          "name": "LEP_CODE",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "LEP_CODE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/LEP_DESCRIPTION",
+          "name": "LEP_DESCRIPTION",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "LEP_DESCRIPTION"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/PRIM_EX_CODE",
+          "name": "PRIM_EX_CODE",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "PRIM_EX_CODE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/PRIM_EX",
+          "name": "PRIM_EX",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "PRIM_EX"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/OTHER_EX_CODES",
+          "name": "OTHER_EX_CODES",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "OTHER_EX_CODES"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/OTHER_EX",
+          "name": "OTHER_EX",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "OTHER_EX"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/GIFTED",
+          "name": "GIFTED",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "GIFTED"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/ESE",
+          "name": "ESE",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "ESE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/HOMELESS_CODE",
+          "name": "HOMELESS_CODE",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "HOMELESS_CODE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/HOMELESS_CAUSE",
+          "name": "HOMELESS_CAUSE",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "HOMELESS_CAUSE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/HOMELESS_UNAC_YTH",
+          "name": "HOMELESS_UNAC_YTH",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "HOMELESS_UNAC_YTH"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/GIFTED_ELIG",
+          "name": "GIFTED_ELIG",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "GIFTED_ELIG"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/S504",
+          "name": "S504",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "S504"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/PRIM_HOME_LANG",
+          "name": "PRIM_HOME_LANG",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "PRIM_HOME_LANG"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/LNF",
+          "name": "LNF",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "LNF"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/PSF",
+          "name": "PSF",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "PSF"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/NWF_Letter",
+          "name": "NWF_Letter",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "NWF_Letter"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/NWF_Word",
+          "name": "NWF_Word",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "NWF_Word"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/ORF_WC",
+          "name": "ORF_WC",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "ORF_WC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/UnifiedScore",
+          "name": "UnifiedScore",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "UnifiedScore"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/FAST_Equivalent_Score",
+          "name": "FAST_Equivalent_Score",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "FAST_Equivalent_Score"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/PR",
+          "name": "PR",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "PR"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/NCE",
+          "name": "NCE",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "NCE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/Overall_Scale_Score",
+          "name": "Overall_Scale_Score",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "Overall_Scale_Score"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/Phonological_Awareness_Scale_Score",
+          "name": "Phonological_Awareness_Scale_Score",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "Phonological_Awareness_Scale_Score"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/Phonics_Scale_Score",
+          "name": "Phonics_Scale_Score",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "Phonics_Scale_Score"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/Vocabulary_Scale_Score",
+          "name": "Vocabulary_Scale_Score",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "Vocabulary_Scale_Score"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/FAST_PM3_AchievementLevel",
+          "name": "FAST_PM3_AchievementLevel",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "FAST_PM3_AchievementLevel"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G12_raw.csv/iReady_Spring_Placement",
+          "name": "iReady_Spring_Placement",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G12_raw.csv"
+            },
+            "extract": {
+              "column": "iReady_Spring_Placement"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "D3_G3",
+      "name": "D3_G3",
+      "description": "Schema of D3_G3.csv (restricted distribution).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/Index",
+          "name": "Index",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "Index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/ED",
+          "name": "ED",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "ED"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/ESE",
+          "name": "ESE",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "ESE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/504",
+          "name": "504",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "504"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/ELL",
+          "name": "ELL",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "ELL"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/Sum_Days_Sus",
+          "name": "Sum Days Sus",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "Sum Days Sus"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/ADA",
+          "name": "ADA",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "ADA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/PY_SS",
+          "name": "PY SS",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "PY SS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/FAST_PM1_SS",
+          "name": "FAST PM1 SS",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "FAST PM1 SS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/CY_IR_SS_PM1",
+          "name": "CY IR SS PM1",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "CY IR SS PM1"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/ELA_QC",
+          "name": "ELA QC",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "ELA QC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/Port_S1",
+          "name": "Port S1",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "Port S1"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/CY_IR_SS_PM2",
+          "name": "CY IR SS PM2",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "CY IR SS PM2"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/FAST_PM2_SS",
+          "name": "FAST PM2 SS",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "FAST PM2 SS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/CY_IR_SS_PM3",
+          "name": "CY IR SS PM3",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "CY IR SS PM3"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/Port_S2",
+          "name": "Port S2",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "Port S2"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/FAST_PM3_SS",
+          "name": "FAST PM3 SS",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "FAST PM3 SS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/below_level_2",
+          "name": "below_level_2",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "below_level_2"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3.csv/below_level_3",
+          "name": "below_level_3",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3.csv"
+            },
+            "extract": {
+              "column": "below_level_3"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "D3_G3_raw",
+      "name": "D3_G3_raw",
+      "description": "Schema of D3_G3_raw.csv (restricted distribution).",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/Index",
+          "name": "Index",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "Index"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/ED",
+          "name": "ED",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "ED"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/ESE",
+          "name": "ESE",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "ESE"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/504",
+          "name": "504",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "504"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/ELL",
+          "name": "ELL",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "ELL"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/Sum_Days_Sus",
+          "name": "Sum Days Sus",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "Sum Days Sus"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/ADA",
+          "name": "ADA",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "ADA"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/PY_SS",
+          "name": "PY SS",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "PY SS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/FAST_PM1_SS",
+          "name": "FAST PM1 SS",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "FAST PM1 SS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/CY_IR_SS_PM1",
+          "name": "CY IR SS PM1",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "CY IR SS PM1"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/ELA_QC",
+          "name": "ELA QC",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "ELA QC"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/Port_S1",
+          "name": "Port S1",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "Port S1"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/CY_IR_SS_PM2",
+          "name": "CY IR SS PM2",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "CY IR SS PM2"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/FAST_PM2_SS",
+          "name": "FAST PM2 SS",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "FAST PM2 SS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/CY_IR_SS_PM3",
+          "name": "CY IR SS PM3",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "CY IR SS PM3"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/Port_S2",
+          "name": "Port S2",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "Port S2"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "D3_G3_raw.csv/FAST_PM3_SS",
+          "name": "FAST PM3 SS",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "D3_G3_raw.csv"
+            },
+            "extract": {
+              "column": "FAST PM3 SS"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
